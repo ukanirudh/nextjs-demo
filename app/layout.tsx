@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import './globals.css'
+import MainHeader from '@/components/appComponents/main-header';
 
 /* Reserved name */
 export const metadata = {
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactElement }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MainHeader />
+        {children}
+      </body>
     </html>
   );
 }
